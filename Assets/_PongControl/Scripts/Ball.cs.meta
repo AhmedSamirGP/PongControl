@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 2bf020a4123e89b4096a81f26ea57331
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ballCollisionLeft: {fileID: 11400000, guid: 59f9beca2dad3b34aa5c1235846ae8e6, type: 2}
+  - ballCollisionRight: {fileID: 11400000, guid: 286dbb50d5a7b324991ca8872edefe93, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
