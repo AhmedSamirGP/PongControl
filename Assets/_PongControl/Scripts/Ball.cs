@@ -90,7 +90,7 @@ public class Ball : MonoBehaviour
         ballTrail.emitting = true;
         
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Left"))
         {
@@ -104,6 +104,5 @@ public class Ball : MonoBehaviour
             x_direction = -1;
             Spawn();
         }
-        
     }
 }
