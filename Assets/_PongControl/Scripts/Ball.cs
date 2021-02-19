@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
     private int x_direction;
     [SerializeField] private EventSO ballCollisionLeft;
     [SerializeField] private EventSO ballCollisionRight;
+    [SerializeField] private EventSO ballPadCollision;
     
     private void Awake()
     {
@@ -103,6 +104,14 @@ public class Ball : MonoBehaviour
             ballCollisionRight.raise();
             x_direction = -1;
             Spawn();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Pad"))
+        {
+            ballPadCollision.raise();
         }
     }
 }
