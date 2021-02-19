@@ -5,20 +5,24 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public TMP_Text text;
+    public TMP_Text text1;
+    public TMP_Text text2;
     //[SerializeField] IntSO scoreSO;
     private int score = 0;
-    void Start()
-    {
-        text.GetComponent<Text>();
-       // SOEventListener.+= OnIncreaseScore;
-    }
+ 
 
-    private void OnIncreaseScore()
+    private void OnIncreaseScore1()
     {
-        score += 100;
-      //  scoreSO.value = score;
-        Debug.Log(score);
-        text.text = score.ToString();
+        score += 1;
+   
+  
+        text1.text = score.ToString();
+    }
+    private void OnIncreaseScore2()
+    {
+        score += 1;
+
+
+        text1.text = score.ToString();
     }
 }
