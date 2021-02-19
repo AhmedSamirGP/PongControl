@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
     private int x_direction;
     [SerializeField] private EventSO ballCollisionLeft;
     [SerializeField] private EventSO ballCollisionRight;
+    [SerializeField] private EventSO ballCollision;
     
     private void Awake()
     {
@@ -104,5 +105,9 @@ public class Ball : MonoBehaviour
             x_direction = -1;
             Spawn();
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        ballCollision.raise();
     }
 }
